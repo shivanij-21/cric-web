@@ -1,0 +1,31 @@
+
+
+<div id="overWrap" class="over-wrap" style="height: calc(100% - 26px);">
+    <div class="casino-box-tabs">
+        <div class="casino-tabs-menu">
+            <a (click)="scrollLeft()" class="arrow-tabs arrow-left"><i class="fas fa-chevron-left"></i></a>
+            <ul #tab1 class="nav nav-pills scroll">
+                <li class="nav-item" *ngFor="let awc of AWClists"
+                (click)="AWCFilter(awc)"><a
+                        href="javascript:void(0)" class="nav-link"
+                        [ngClass]="{'active': awc.Platform == awcPlatform}">
+                        <span>{{awc.Platform | titlecase}}</span></a></li>
+            </ul>
+            <a (click)="scrollRight()" class="arrow-tabs arrow-right"><i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+    <div class="gamehall-wrap-simple">
+
+        <a class="entrance-half" 
+        *ngFor="let awc of awcGames"
+            style="cursor: pointer"
+            (click)="openAWC(awc.GameType,awcPlatform,awc.GameCode)">
+            <dl class="entrance-title" >
+                <dt>{{awc.GameName}}</dt>
+                <div class="rotating-border rotating-border--google heart"><span>Play Now <i aria-hidden="true"
+                    class="fa fa-play"></i></span></div>
+            </dl>
+            <img class="tp_image diaimg" src="assets/images/awc_images/{{awc.GameCode}}.png" alt="{{awc.GameName}}" draggable="false" >
+        </a>
+    </div>
+</div>

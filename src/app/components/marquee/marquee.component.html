@@ -1,0 +1,28 @@
+<div class="marquee-box">
+    <h4>{{Update?.News}}</h4>
+    <div class="marquee" *ngIf="isLogin">
+        <a (click)="openAnnouncementPopUp();" *ngIf="siteName=='runexchange'">
+            <!-- <span>23 Dec 2020</span> -->
+            Welcome to Runexch. বাংলাদেশের সব থেকে বিশ্বস্ত সাইট।
+        </a>
+        <!-- <a (click)="openAnnouncementPopUp();" *ngIf="siteName=='lc365' || siteName=='lc247'">
+   
+            সর্বোত্তম আপডেটের জন্য সাইটটি সকাল 6:30 থেকে রক্ষণাবেক্ষণের অধীনে থাকবে
+        </a> -->
+        <a (click)="openAnnouncementPopUp();" *ngIf="siteName=='velkiex'|| siteName=='wicket7' || siteName=='baji365' || siteName=='nayaludis' || siteName=='betbuz365' || siteName=='maza247' || siteName=='gamex'">
+            আমাদের সাইট এ কোন প্রকার VPN ব্যবহার করে বাজি ধরা যাবে না। যদি VPN ব্যবহারকারি ধরা পরে তা হলে তার ID বন্ধ করে দেয়া হবে। এ জন্য আপাদের আপলাইন কোন প্রকার দায়ভার নিবে না।
+        </a>
+        <a (click)="openAnnouncementPopUp();">
+            <!-- <span>23 Dec 2020</span> -->
+            {{news}} {{vnews?' | '+vnews:''}}
+        </a>
+      
+    </div>
+    <div class="marquee" *ngIf="!isLogin && siteName=='winplus247'">
+
+        <a (click)="openAnnouncementPopUp();">
+            Welcome to Winplus247. Bonus promotion will open again soon.
+        </a>
+      
+    </div>
+</div>

@@ -1,0 +1,733 @@
+<div id="overWrap" class="over-wrap" style="height: calc(100% - 26px)">
+
+
+    <app-promote-banner></app-promote-banner>
+
+
+    <div class="gamehall-wrap-simple">
+        <a class="entrance isBig" *ngIf="siteName=='winplus247'">
+            <img src="assets/images/promo/winplus247.png" alt="" draggable="false">
+        </a>
+        <ng-container *ngIf="!isLogin">
+       
+            <ng-container>
+                <ng-container *ngIf="isEtgcasino">
+                    <a class="entrance-half"
+                        (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+                        *ngFor="let awc of awcCasino_evolution_ezugi">
+                        <dl class="entrance-title">
+                            <dt>{{awc.name | titlecase}}</dt>
+                            <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                        aria-hidden="true" class="fa fa-play"></i></span></div>
+                            <!-- <dd>PLay Now</dd> -->
+                        </dl>
+                        <img src="assets/images/cricbuzzer/{{awc.name}}.png" alt="" draggable="false">
+                    </a>
+                </ng-container>
+                <!-- <a class="entrance-half" (click)="openLoginPop()">
+                    <dl class="entrance-title">
+                        <dt>Ezugi</dt>
+                        <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                    aria-hidden="true" class="fa fa-play"></i></span></div>
+                    </dl>
+                    <img src="assets/images/cricbuzzer/Ezugi.png" alt="" draggable="false">
+                </a> -->
+            </ng-container>
+            <a class="entrance isBig" (click)="openLoginPop()">
+                <dl class="entrance-title">
+                    <dt>Betgames</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                    <!-- <dd>PLay Now</dd> -->
+                </dl>
+                <img src="assets/images/cricbuzzer/betgame.jpg" alt="" draggable="false">
+            </a>
+            <ng-container *ngIf="!isEtgcasino">
+                <!-- <a class="entrance-half" (click)="openLoginPop()" *ngFor="let sn of superNowa_AWC">
+                    <dl class="entrance-title">
+                        <dt>{{sn.name | titlecase}}</dt>
+                        <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                    aria-hidden="true" class="fa fa-play"></i></span></div>
+                    </dl>
+                    <img src="assets/images/cricbuzzer/{{sn.name}}.png" alt="" draggable="false">
+                </a> -->
+
+            </ng-container>
+            <a class="entrance-half" (click)="openLoginPop()" *ngIf="siteName!='winplus247' && siteName!='winplus99'">
+                <dl class="entrance-title">
+                    <dt>Poker</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                    <!-- <dd>PLay Now</dd> -->
+                </dl>
+                <img src="assets/images/cricbuzzer/poker1.png" alt="" draggable="false">
+            </a>
+            <a class="entrance isBig" (click)="openLoginPop()" *ngIf="siteName=='winplus247' || siteName=='winplus99'">
+                <dl class="entrance-title">
+                    <dt>Poker</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                    <!-- <dd>PLay Now</dd> -->
+                </dl>
+                <img src="assets/images/cricbuzzer/poker.png" alt="" draggable="false">
+            </a>
+            <a class="entrance-half" (click)="openLoginPop()" *ngIf="siteName=='dreamcric'">
+                <dl class="entrance-title">
+                    <dt>Supernowa</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                    <!-- <dd>PLay Now</dd> -->
+                </dl>
+                <img src="assets/images/cricbuzzer/SN.jpeg" alt="" draggable="false">
+            </a>
+            <ng-container *ngIf="isEtgcasino">
+                <!-- <a class="entrance-half" (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+                *ngFor="let awc of awcCasino_Ae_sexy">
+                <dl class="entrance-title">
+                    <dt>{{awc.name | titlecase}}</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <img src="assets/images/cricbuzzer/{{awc.name}}.png" alt="" draggable="false">
+            </a> -->
+                <!-- <a class="entrance isBig" [routerLink]="isLogin?['/casino/supernowa-casino/AWC']:['/login']"
+                    *ngFor="let sn of superNowa_AWC">
+                    <dl class="entrance-title">
+                        <dt>{{sn.name | titlecase}}</dt>
+                        <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                    aria-hidden="true" class="fa fa-play"></i></span></div>
+                    </dl>
+                    <img src="assets/images/cricbuzzer/{{sn.name}}.jpeg" alt="" draggable="false">
+                </a> -->
+            </ng-container>
+            <a class="entrance-half" (click)="openLoginPop()" *ngIf="isEtgcasino">
+                <dl class="entrance-title">
+                    <dt>Slots</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                    <!-- <dd>PLay Now</dd> -->
+                </dl>
+                <img src="assets/images/cricbuzzer/slot.png" alt="" draggable="false">
+            </a>
+            <a class="entrance isBig" (click)="openLoginPop()" *ngIf="!isEtgcasino">
+                <dl class="entrance-title">
+                    <dt>Slots</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                    <!-- <dd>PLay Now</dd> -->
+                </dl>
+                <img src="assets/images/cricbuzzer/slot.jpg" alt="" draggable="false">
+            </a>
+            <!-- <a *ngIf="siteName=='dreamcric'" class="entrance-half" (click)="openLoginPop()">
+                <dl class="entrance-title">
+                    <dt>7 Mojos</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <img src="assets/images/cricbuzzer/7Mojos.jpg" alt="" draggable="false">
+            </a> -->
+            <a class="entrance-half" (click)="openLoginPop()" *ngIf="siteName!='dreamcric'">
+                <dl class="entrance-title">
+                    <dt>Supernowa</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                    <!-- <dd>PLay Now</dd> -->
+                </dl>
+                <img src="assets/images/cricbuzzer/SN.jpeg" alt="" draggable="false">
+            </a>
+            <!-- <a class="entrance isBig" (click)="openLoginPop()" *ngIf="siteName=='dreamcric'">
+                <dl class="entrance-title">
+                    <dt>Supernowa</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <img src="assets/images/cricbuzzer/SN1.jpeg" alt="" draggable="false">
+            </a> -->
+            <a *ngIf="siteName=='winplus247' || siteName=='winplus99'" class="entrance-half"
+                [routerLink]="isLogin?['/casino/Indian-casino']:['/login']">
+                <dl class="entrance-title">
+                    <dt>Aura</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                    <!-- <dd>PLay Now</dd> -->
+                </dl>
+                <img src="assets/images/cricbuzzer/EURAGAMING.svg" alt="" draggable="false">
+            </a>
+<!--          
+            <a class="entrance-half" (click)="openLoginPop()" *ngIf="siteName!='winplus247' && siteName!='winplus99'">
+                <dl class="entrance-title">
+                    <dt>Diamond</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <img src="assets/images/cricbuzzer/DIAMONDCASINO.svg" alt="" draggable="false">
+            </a> -->
+            <a class="entrance isBig" (click)="openLoginPop()" *ngIf="siteName!='winplus247' && siteName!='winplus99'">
+                <dl class="entrance-title">
+                    <dt>Diamond</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <img src="assets/images/cricbuzzer/Diamond Casino.png" alt="" draggable="false">
+            </a>
+            <a class="entrance isBig" (click)="openLoginPop()"  *ngIf="siteName=='winplus247' || siteName=='winplus99'">
+                <dl class="entrance-title">
+                    <dt>EVOLUTION</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <img src="assets/images/cricbuzzer/EVOLUTION.JPG" alt="" draggable="false">
+            </a>
+
+            <ng-container *ngIf="isEtgcasino">
+                <!-- <a class="entrance-half" (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+                *ngFor="let awc of awcCasino_Ae_sexy">
+                <dl class="entrance-title">
+                    <dt>{{awc.prod_name | titlecase}}</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <img src="assets/images/awc_banner/awc_poster/{{awc.prod_name}}.png" alt="" draggable="false">
+            </a> -->
+                <!-- <a class="entrance-half" [routerLink]="isLogin?['/casino/supernowa-casino/AWC']:['/login']"
+                    *ngFor="let sn of superNowa_AWC">
+                    <dl class="entrance-title">
+                        <dt>{{sn.name | titlecase}}</dt>
+                        <div class="rotating-border rotating-border--google heart"><span>{{Update?.PlayNow}} <i
+                                    aria-hidden="true" class="fa fa-play"></i></span></div>
+                    </dl>
+                    <img src="assets/images/awc_banner/awc_bdbet/{{sn.name}}.png" alt="" draggable="false">
+                </a> -->
+            </ng-container>
+            <!-- <a class="entrance-half" (click)="openLoginPop()">
+                <dl class="entrance-title">
+                    <dt>Vivo</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <img src="assets/images/cricbuzzer/Vivo.jpg" alt="" draggable="false">
+            </a> -->
+            <!-- <a *ngIf="siteName!='dreamcric'" class="entrance-half" (click)="openLoginPop()">
+                <dl class="entrance-title">
+                    <dt>7 Mojos</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <img src="assets/images/cricbuzzer/7Mojos.jpg" alt="" draggable="false">
+            </a> -->
+            <a routerLink="/running" style="cursor: pointer">
+                <dl id="onLiveBoard" class="on_live">
+                    <dt>
+                        <p class="live_icon"><span></span> LIVE</p>
+                    </dt>
+
+                    <ng-container *ngFor="let sport of sportList;trackBy:trackBySport; let index = index">
+                        <dd id="onLiveCount_{{sport.sportsName}}" *ngIf="index<7">
+                            <p>{{sport.sportsName | titlecase}}</p><span id="count">{{sport.inplayCounts}}</span>
+                        </dd>
+                    </ng-container>
+
+                </dl>
+                <dl class="entrance-title">
+                    <dt>Sports</dt>
+                    <!-- <dd>
+                        {{Update?.playnow}}</dd> -->
+
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <ng-container>
+                    <img src="assets/images/mobile/gamehall/banner_sports.png" alt="" draggable="false">
+                </ng-container>
+
+            </a>
+
+            <ng-container *ngIf="isEtgcasino">
+                <a class="entrance-half"
+                    (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+                    *ngFor="let awc of awcCasino_jili">
+                    <dl class="entrance-title">
+                        <dt>{{awc.name | titlecase}}</dt>
+                        <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                    aria-hidden="true" class="fa fa-play"></i></span></div>
+                        <!-- <dd>PLay Now</dd> -->
+                    </dl>
+                    <img src="assets/images/cricbuzzer/{{awc.name}}.png" alt="" draggable="false">
+                </a>
+                <a class="entrance isBig"
+                    (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+                    *ngFor="let awc of awcCasino_kingmaker">
+                    <dl class="entrance-title">
+                        <dt>{{awc.name | titlecase}}</dt>
+                        <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                    aria-hidden="true" class="fa fa-play"></i></span></div>
+                        <!-- <dd>PLay Now</dd> -->
+                    </dl>
+                    <img src="assets/images/cricbuzzer/{{awc.name}}.png" alt="" draggable="false">
+                </a>
+                <a class="entrance-half"
+                    (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+                    *ngFor="let awc of awcCasino_international">
+                    <dl class="entrance-title">
+                        <dt>{{awc.name | titlecase}}</dt>
+                        <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                    aria-hidden="true" class="fa fa-play"></i></span></div>
+                        <!-- <dd>PLay Now</dd> -->
+                    </dl>
+                    <img src="assets/images/cricbuzzer/{{awc.name}}.jpg" alt="" draggable="false">
+                </a>
+            </ng-container>
+            <a class="entrance is Big" (click)="openLoginPop()">
+                <dl class="entrance-title">
+                    <dt>Twain</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                    <!-- <dd>PLay Now</dd> -->
+                </dl>
+                <img src="assets/images/cricbuzzer/twain.jpg" alt="" draggable="false">
+            </a>
+        </ng-container>
+        <ng-container *ngIf="isLogin">
+            <ng-container>
+                <ng-container *ngIf="isEtgcasino">
+                    <a class="entrance-half"
+                        (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+                        *ngFor="let awc of awcCasino_evolution_ezugi">
+                        <dl class="entrance-title">
+                            <dt>{{awc.name | titlecase}}</dt>
+                            <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                        aria-hidden="true" class="fa fa-play"></i></span></div>
+                            <!-- <dd>PLay Now</dd> -->
+                        </dl>
+                        <img src="assets/images/cricbuzzer/{{awc.name}}.png" alt="" draggable="false">
+                    </a>
+                </ng-container>
+                <!-- <a class="entrance-half" [routerLink]="isLogin?['/casino/supernowa-casino/EZ']:['/login']">
+                    <dl class="entrance-title">
+                        <dt>Ezugi</dt>
+                        <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                    aria-hidden="true" class="fa fa-play"></i></span></div>
+                    </dl>
+                    <img src="assets/images/cricbuzzer/Ezugi.png" alt="" draggable="false">
+                </a> -->
+            </ng-container>
+            <a class="entrance isBig" [routerLink]="isLogin?['/betgames']:['/login']">
+                <dl class="entrance-title">
+                    <dt>Betgames</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                    <!-- <dd>PLay Now</dd> -->
+                </dl>
+                <img src="assets/images/cricbuzzer/betgame.jpg" alt="" draggable="false">
+            </a>
+            <ng-container *ngIf="!isEtgcasino">
+                <!-- <a class="entrance-half" [routerLink]="isLogin?['/casino/supernowa-casino/AWC']:['/login']"
+                    *ngFor="let sn of superNowa_AWC">
+                    <dl class="entrance-title">
+                        <dt>{{sn.name | titlecase}}</dt>
+                        <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                    aria-hidden="true" class="fa fa-play"></i></span></div>
+                    </dl>
+                    <img src="assets/images/cricbuzzer/{{sn.name}}.png" alt="" draggable="false">
+                </a> -->
+
+            </ng-container>
+            <a class="entrance isBig" [routerLink]="isLogin?['/pokercasino']:['/login']" *ngIf="sEtgcasino">
+                <dl class="entrance-title">
+                    <dt>Poker</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                    <!-- <dd>PLay Now</dd> -->
+                </dl>
+                <img src="assets/images/cricbuzzer/poker.png" alt="" draggable="false">
+            </a>
+            <a class="entrance-half" [routerLink]="isLogin?['/pokercasino']:['/login']" *ngIf="!sEtgcasino">
+                <dl class="entrance-title">
+                    <dt>Poker</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                    <!-- <dd>PLay Now</dd> -->
+                </dl>
+                <img src="assets/images/cricbuzzer/poker1.png" alt="" draggable="false">
+            </a>
+            <ng-container *ngIf="isEtgcasino">
+                <!-- <a class="entrance-half" (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+                *ngFor="let awc of awcCasino_Ae_sexy">
+                <dl class="entrance-title">
+                    <dt>{{awc.name | titlecase}}</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <img src="assets/images/cricbuzzer/{{awc.name}}.png" alt="" draggable="false">
+            </a> -->
+                <!-- <a class="entrance-half" [routerLink]="isLogin?['/casino/supernowa-casino/AWC']:['/login']"
+                    *ngFor="let sn of superNowa_AWC">
+                    <dl class="entrance-title">
+                        <dt>{{sn.name | titlecase}}</dt>
+                        <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                    aria-hidden="true" class="fa fa-play"></i></span></div>
+                    </dl>
+                    <img src="assets/images/cricbuzzer/{{sn.name}}.png" alt="" draggable="false">
+                </a> -->
+            </ng-container>
+            <a class="entrance-half" *ngIf="!isaura" [routerLink]="isLogin?['/slot-list']:['/login']">
+                <dl class="entrance-title">
+                    <dt>Slots</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                    <!-- <dd>PLay Now</dd> -->
+                </dl>
+                <img src="assets/images/cricbuzzer/slot.png" alt="" draggable="false">
+            </a>
+            <a class="entrance-half" *ngIf="isaura" [routerLink]="isLogin?['/slot-list']:['/login']">
+                <dl class="entrance-title">
+                    <dt>Slots</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                    <!-- <dd>PLay Now</dd> -->
+                </dl>
+                <img src="assets/images/cricbuzzer/slot.png" alt="" draggable="false">
+            </a>
+            <!-- <a *ngIf="siteName=='dreamcric'" class="entrance-half" [routerLink]="isLogin?['/slotgame',8220]:['/login']">
+                <dl class="entrance-title">
+                    <dt>7 Mojos</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <img src="assets/images/cricbuzzer/7Mojos.jpg" alt="" draggable="false">
+            </a> -->
+            <a class="entrance-half" [routerLink]="isLogin?['/casino/supernowa-casino/SN']:['/login']" *ngIf="siteName!='dreamcric'">
+                <dl class="entrance-title">
+                    <dt>Supernowa</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                    <!-- <dd>PLay Now</dd> -->
+                </dl>
+                <img src="assets/images/cricbuzzer/SN1.jpeg" alt="" draggable="false">
+            </a>
+            <a class="entrance isBig" [routerLink]="isLogin?['/casino/supernowa-casino/SN']:['/login']" *ngIf="siteName=='dreamcric'">
+                <dl class="entrance-title">
+                    <dt>Supernowa</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                    <!-- <dd>PLay Now</dd> -->
+                </dl>
+                <img src="assets/images/cricbuzzer/SN1.jpeg" alt="" draggable="false">
+            </a>
+            <!-- <a class="entrance isBig" [routerLink]="isLogin?['/casino/supernowa-casino/SN']:['/login']"
+                *ngIf="!isaura && isEtgcasino">
+                <dl class="entrance-title">
+                    <dt>Supernowa</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <img src="assets/images/cricbuzzer/SN1.jpeg" alt="" draggable="false">
+            </a> -->
+            <a *ngIf="siteName!='dreamcric' && isaura" class="entrance-half"
+                [routerLink]="isLogin?['/casino/Indian-casino']:['/login']">
+                <dl class="entrance-title">
+                    <dt>Aura</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                    <!-- <dd>PLay Now</dd> -->
+                </dl>
+                <img src="assets/images/cricbuzzer/EURAGAMING.svg" alt="" draggable="false">
+            </a>
+
+            <a class="entrance-half" [routerLink]="isLogin?['/casino']:['/login']"  *ngIf="siteName!='dreamcric' &&  siteName!='winplus247' && siteName!='winplus99'">
+                <dl class="entrance-title">
+                    <dt>Diamond</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <img src="assets/images/cricbuzzer/DIAMONDCASINO.svg" alt="" draggable="false">
+            </a>
+            <a class="entrance isBig" [routerLink]="isLogin?['/casino']:['/login']"  *ngIf="siteName=='dreamcric'">
+                <dl class="entrance-title">
+                    <dt>Diamond</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <img src="assets/images/cricbuzzer/Diamond Casino.png" alt="" draggable="false">
+            </a>
+
+            <a class="entrance isBig" [routerLink]="['/casino/supernowa-casino/EZ']"  *ngIf="siteName=='winplus247' || siteName=='winplus99'">
+                <dl class="entrance-title">
+                    <dt>EVOLUTION</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <img src="assets/images/cricbuzzer/EVOLUTION.JPG" alt="" draggable="false">
+            </a>
+            <ng-container *ngIf="isEtgcasino">
+                <!-- <a class="entrance-half" (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+                *ngFor="let awc of awcCasino_Ae_sexy">
+                <dl class="entrance-title">
+                    <dt>{{awc.prod_name | titlecase}}</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <img src="assets/images/awc_banner/awc_poster/{{awc.prod_name}}.png" alt="" draggable="false">
+            </a> -->
+                <!-- <a class="entrance-half" [routerLink]="isLogin?['/casino/supernowa-casino/AWC']:['/login']"
+                    *ngFor="let sn of superNowa_AWC">
+                    <dl class="entrance-title">
+                        <dt>{{sn.name | titlecase}}</dt>
+                        <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                    aria-hidden="true" class="fa fa-play"></i></span></div>
+                    </dl>
+                    <img src="assets/images/awc_banner/awc_bdbet/{{sn.name}}.png" alt="" draggable="false">
+                </a> -->
+            </ng-container>
+            <!-- <a class="entrance-half" [routerLink]="isLogin?['/slotgame',6667]:['/login']">
+                <dl class="entrance-title">
+                    <dt>Vivo</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <img src="assets/images/cricbuzzer/Vivo.jpg" alt="" draggable="false">
+            </a> -->
+            <!-- <a *ngIf="siteName!='dreamcric'" class="entrance-half" [routerLink]="isLogin?['/slotgame',8220]:['/login']">
+                <dl class="entrance-title">
+                    <dt>7 Mojos</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <img src="assets/images/cricbuzzer/7Mojos.jpg" alt="" draggable="false">
+            </a> -->
+            <a routerLink="/running" style="cursor: pointer">
+                <dl id="onLiveBoard" class="on_live">
+                    <dt>
+                        <p class="live_icon"><span></span> LIVE</p>
+                    </dt>
+
+                    <ng-container *ngFor="let sport of sportList;trackBy:trackBySport; let index = index">
+                        <dd id="onLiveCount_{{sport.sportsName}}" *ngIf="index<7">
+                            <p>{{sport.sportsName | titlecase}}</p><span id="count">{{sport.inplayCounts}}</span>
+                        </dd>
+                    </ng-container>
+
+                </dl>
+                <dl class="entrance-title">
+                    <dt>Sports</dt>
+                    <!-- <dd>
+                        {{Update?.playnow}}</dd> -->
+
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                </dl>
+                <ng-container>
+                    <img src="assets/images/mobile/gamehall/banner_sports.png" alt="" draggable="false">
+                </ng-container>
+
+            </a>
+
+            <ng-container *ngIf="isEtgcasino">
+                <a class="entrance-half"
+                    (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+                    *ngFor="let awc of awcCasino_jili">
+                    <dl class="entrance-title">
+                        <dt>{{awc.name | titlecase}}</dt>
+                        <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                    aria-hidden="true" class="fa fa-play"></i></span></div>
+                        <!-- <dd>PLay Now</dd> -->
+                    </dl>
+                    <img src="assets/images/cricbuzzer/{{awc.name}}.png" alt="" draggable="false">
+                </a>
+                <a class="entrance isBig"
+                    (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+                    *ngFor="let awc of awcCasino_kingmaker">
+                    <dl class="entrance-title">
+                        <dt>{{awc.name | titlecase}}</dt>
+                        <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                    aria-hidden="true" class="fa fa-play"></i></span></div>
+                        <!-- <dd>PLay Now</dd> -->
+                    </dl>
+                    <img src="assets/images/cricbuzzer/{{awc.name}}.png" alt="" draggable="false">
+                </a>
+                <a class="entrance-half"
+                    (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+                    *ngFor="let awc of awcCasino_international">
+                    <dl class="entrance-title">
+                        <dt>{{awc.name | titlecase}}</dt>
+                        <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                    aria-hidden="true" class="fa fa-play"></i></span></div>
+                        <!-- <dd>PLay Now</dd> -->
+                    </dl>
+                    <img src="assets/images/cricbuzzer/{{awc.name}}.jpg" alt="" draggable="false">
+                </a>
+            </ng-container>
+
+            <a class="entrance is Big" [routerLink]="isLogin?['/twain']:['/login']">
+                <dl class="entrance-title">
+                    <dt>Twain</dt>
+                    <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i
+                                aria-hidden="true" class="fa fa-play"></i></span></div>
+                    <!-- <dd>PLay Now</dd> -->
+                </dl>
+                <img src="assets/images/cricbuzzer/twain.jpg" alt="" draggable="false">
+            </a>
+        </ng-container>
+
+
+    </div>
+
+
+    <app-footer></app-footer>
+</div>
+
+
+<div id="coming_soon" class="overlay" style="display: none;" *ngIf="siteName!='line1000'">
+    <div class="frame-wrap">
+        <div class="news-wrap news-wrap-frame">
+            <div class="side-content">
+                <img src="assets/images/promo/coming_soon.jpg" alt="coming_soon" draggable="false">
+            </div>
+            <footer><a class="btn-send" (click)="hideOverlayInfo('#coming_soon')">CLOSE</a></footer>
+        </div>
+    </div>
+</div>
+
+<!-- <div id="Evolution" class="overlay" style="display: none;" *ngIf="!isIcasino && siteName!='mash247' && siteName!='betswiz' && siteName!='line1000' && siteName!='jeesky7' && siteName!='lcexch'&& siteName!='skyexchM'">
+    <div class="frame-wrap">
+        <div class="news-wrap news-wrap-frame">
+            <div class="side-content">
+                <img src="assets/images/mobile/promo/Evolution-Game.webp" alt="coming_soon" draggable="false">
+            </div>
+            <footer><a class="btn-send" (click)="HideupdateTerm()">CLOSE</a></footer>
+        </div>
+    </div>
+</div> -->
+
+<div id="marketing" class="overlay" style="display: block; " *ngIf="siteName=='skyexchM'">
+    <div class="frame-wrap">
+        <div class="news-wrap news-wrap-frame">
+            <div class="side-content">
+                <div class="main">
+                    <div class="prod one">
+                        <div>
+                            <label>To use this domain <span>please contact <i class="fa fa-phone" aria-hidden="true"
+                                        style="padding-left: 2px;"></i></span></label>
+                        </div>
+                        <div class="features">
+                            <h3 style="margin-bottom: 15px; font-size: 18px;"> To acquire this domain</h3>
+                            <span style="display: flex;">
+                                <a href="tel:{{Marketing_whatsapp}}" class="info" target="_blank"><i class="fa fa-phone"
+                                        aria-hidden="true"></i></a>
+                                <a href="tel:{{Marketing_whatsapp}}" class="mobfont">
+                                    <p> {{Marketing_whatsapp}}</p>
+                                </a>
+                            </span>
+                            <h2>OR</h2>
+                            <span style="display: flex;">
+                                <a class="info" href="skype:live:.cid.aca767b81e7a5a95?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='zoro'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                                <a class="info" href="skype:live:.cid.49d7965e09cff1ca?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='Max'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                                <a class="info" href="skype:live:.cid.7affdef6a7c897d7?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='Singham'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                                <a class="info" href="skype:live:.cid.e39e2f3f929534da?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='Popeye'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                                <a class="info" href="skype:live:.cid.87e483044daa97f?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='Sanjog'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                                <a class="info" href="skype:live:.cid.d46a30c7f8c9e28d?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='Samaira'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                                <a class="info" href="skype:live:.cid.2deaba81b8b400db?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='Phalansh'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                                <a class="info" href="skype:live:.cid.9b097f291f79c943?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='Vasudeo'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                                <a class="info" href="skype:live:.cid.2d0bfe0a892473db?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='Charlie'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                                <a class="info" href="skype:live:.cid.28fdd74ed87c06b1?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='Bidi'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+
+                                <a href="skype:live:.cid.aca767b81e7a5a95?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='zoro'">Click
+                                    here to message us directly on Skype</a>
+
+                                <a href="skype:live:.cid.49d7965e09cff1ca?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='Max'">Click
+                                    here to message us directly on Skype</a>
+
+                                <a href="skype:live:.cid.7affdef6a7c897d7?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='Singham'">Click
+                                    here to message us directly on Skype</a>
+
+                                <a href="skype:live:.cid.e39e2f3f929534da?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='Popeye'">Click
+                                    here to message us directly on Skype</a>
+
+                                <a href="skype:live:.cid.87e483044daa97f?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='Sanjog'">Click
+                                    here to message us directly on Skype</a>
+
+                                <a href="skype:live:.cid.d46a30c7f8c9e28d?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='Samaira'">Click
+                                    here to message us directly on Skype</a>
+
+                                <a href="skype:live:.cid.2deaba81b8b400db?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='Phalansh'">Click
+                                    here to message us directly on Skype</a>
+
+                                <a href="skype:live:.cid.9b097f291f79c943?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='Vasudeo'">Click
+                                    here to message us directly on Skype</a>
+
+
+                                <a href="skype:live:.cid.2d0bfe0a892473db?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='Charlie'">Click
+                                    here to message us directly on Skype</a>
+
+                                <a href="skype:live:.cid.28fdd74ed87c06b1?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='Bidi'">Click
+                                    here to message us directly on Skype</a>
+                            </span>
+                            <i class="fa fa-hand-o-down" style="font-size: 45px;"></i>
+                            <h3 style="padding: 10px;">To check this id please login with Demo Id </h3>
+                            <ul>
+                                <li> Username : Democl</li>
+                                <li>Password : Asdf1234</li>
+                            </ul>
+                            <a class="btncls" (click)="Login()">
+                                Login With DemoId
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <footer><a class="btn-send" (click)="HideupdateTerm()">CLOSE</a></footer>
+        </div>
+    </div>
+</div>

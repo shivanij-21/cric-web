@@ -1,0 +1,446 @@
+
+
+:root {
+    --text-primary: #fff;
+    --text-secondary: #21e8df;
+    --primary-bg: #fff;
+    --secondary-bg: #000;
+    --link-bg: #bbb;
+    --grey-bg: #ccc;
+    --light-bg: #eee;
+    --suspended-color: #730709;
+    --red-color: #ff0000;
+    --yellow-color: #ffff00;
+    --green-color: #00ff00;
+    --white-color: #fff;
+    --site-color: #000;
+    --green-bg: #145b12;
+    --blue-color: #0000ff;
+    --theme1-bg: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%) !important;
+    --theme1-bg90: #1E2040E6;
+    --theme2-bg: #00A358;
+    --theme2-bg70: #00A358B3;
+    --theme2-bg85: #00A358D9;
+    --primary-color: #fff;
+    --secondary-color: #fff;
+}
+
+
+.exch1 .login-wrap li.user,.exch1 .account-wrap .head-refresh a,.exch1 .account-wrap .account,.exch1 .one_click img,.exch1 .one_click.select img
+{
+    background-image: url('/assets/images/sprite/top-s17ac08be72.png');
+    background-repeat: no-repeat
+}
+
+.exch1 .menu-list .Go,.exch1 .path .path-back,.exch1 .path .path-back.select{
+    /* background-image: url('/assets/images/sprite/left-sc46d41daf3.png'); */
+    background-image: url('/assets/images/svgicons/next.svg');
+    background-repeat: no-repeat
+}
+
+.exch1 .login_to_go .close,.exch1 .one_click-setting .a-edit img,.exch1 .one_click-stake{
+    background-image: url('/assets/images/sprite/main-se1dc81cb01.png');
+    background-repeat: no-repeat
+}
+
+.exch1 .one_click-setting{
+    background-image: url('/assets/images/sprite/bg-seea86eb9f8.png');
+    background-repeat: no-repeat
+}
+
+.exch1 .icon-login{
+    background-image: url('/assets/images/sprite/login-s28112929a1.png');
+    background-repeat: no-repeat
+}
+
+.exch1 .header h1{
+    font-size: 0;
+    text-indent: -99999px
+}
+
+.exch1 .game-highlight-wrap h3 {
+    background-image: linear-gradient( 
+        180deg
+         , #5f7fdb 0, #0cddff 100%);
+    color: #1E1E1E;
+    font-weight: bold;
+}
+
+.exch1 .header h1 {
+    width: 158px;
+    height: 53px;
+    background: url(/assets/images/exch1/logo-exch1.png) no-repeat;
+    background-size: contain;
+}
+
+.exch1 .account-wrap .a-wallet .red{
+    background-color: #fff;
+    padding: 0 3px;
+    border-radius: 2px
+}
+
+.exch1 .announce-header h1:before {
+    background: #FFB80C
+}
+
+.exch1 .news-wrap .announce-header {
+    /* background: url("/assets/images/announcement/popup-header-exch1.png") center no-repeat */
+}
+
+body.exch1 {
+    background-color: #F0ECE1
+}
+
+.exch1 .btn.select,.exch1 .select.btn-send,.exch1 .pages a.select,.pages .exch1 a.select,.exch1 .calendarTable_inputBox input.select,.calendarTable_inputBox .exch1 input.select,.exch1 .calendarTable_inputBox textarea.select,.calendarTable_inputBox .exch1 textarea.select {
+    color: var(--text-secondary);
+    background: #444 url(/assets/images/exch1/btn-select-skyEX.jpg) repeat-x;
+    border-color: #222
+}
+
+.exch1 .btn.select:hover,.exch1 .select.btn-send:hover,.exch1 .pages a.select:hover,.pages .exch1 a.select:hover,.exch1 .calendarTable_inputBox input.select:hover,.calendarTable_inputBox .exch1 input.select:hover,.exch1 .calendarTable_inputBox textarea.select:hover,.calendarTable_inputBox .exch1 textarea.select:hover {
+    background: #444 url(/assets/images/exch1/btn-select-skyEX.jpg) repeat-x
+}
+
+.exch1 .btn-send {
+    background: #121212 url(/assets/images/exch1/bg-send-skyEX.png) repeat-x;
+    color: var(--text-secondary);
+    border-color: #000
+}
+
+
+.exch1 .btn-send:hover {
+    background: #464646 url(/assets/images/exch1/bg-send_hover-skyEX.png) repeat-x
+}
+
+.exch1 .btn-send.disable {
+    background: #A4A4A4 url(/assets/images/exch1/bg-send-disable-skyEX.png) repeat-x;
+    border-color: #aaa;
+    color: #E6DFCD
+}
+/* url('left-sc46d41daf3.png') */
+
+.exch1 .kv {
+    background: #000 url(/assets/images/exch1/bg-login_wrap-exch1.jpg) no-repeat
+}
+
+.exch1 .login-panel {
+    color: #000
+}
+
+.exch1 .icon-login {
+    background-position: 0 -425px;
+    height: 12px;
+    width: 12px
+}
+
+.exch1 .announce-header h1:before {
+    background: #FFB80C
+}
+
+.exch1 .top {
+    background: var(--theme1-bg);
+}
+
+.exch1 .header {
+    color: #FFB80C
+}
+
+.exch1 .header h1 {
+    margin-top: -10px
+}
+
+.exch1 .login-wrap li.user {
+    background-position: -96px -5603px
+}
+
+.exch1 .login-wrap .error {
+    color: var(--text-secondary)
+}
+
+.exch1 .login-wrap .btn-signup {
+    display: block;
+    background-color: #666666;
+    background-image: linear-gradient(-180deg, #666 0%, #333 100%)
+}
+
+.exch1 .account-wrap li .refresh-bar {
+    background: url(/assets/images/livesports/refresh80-livesports.gif) no-repeat center
+}
+
+.exch1 .account-wrap .main-wallet.no-multi .red {
+    padding: 1px 3px;
+    color: #F2E9CF !important;
+    background-color: #BF0000;
+    border-radius: 3px
+}
+
+.exch1 .account-wrap a {
+    color: #FFF;
+    background: #3336;
+}
+
+.exch1 .account-wrap .main-wallet {
+    border-color: rgba(0,0,0,0.8)
+}
+
+.exch1 .account-wrap .a-wallet .nums {
+    border: 1px solid #FFF
+}
+
+.exch1 .account-wrap .a-wallet {
+    background-color: rgba(255,255,255,0.15) !important
+}
+
+.exch1 .account-wrap .a-wallet.open {
+    background-color: rgba(255,255,255,0.25) !important
+}
+
+.exch1 .account-wrap .loading-bar span {
+    background: #fff
+}
+
+.exch1 .account-wrap .a-refresh img {
+    background: url('data:image/svg+xml,<svg width="13" height="16" viewBox="0 0 13 16" xmlns="http://www.w3.org/2000/svg"><path d="M6.408 3.223c1.164 0 2.238.288 3.223.863.972.563 1.739 1.324 2.302 2.283.588.998.882 2.072.882 3.223 0 1.151-.294 2.225-.882 3.223-.563.972-1.33 1.739-2.302 2.302-.998.588-2.072.882-3.223.882-1.151 0-2.225-.294-3.223-.882-.972-.563-1.739-1.33-2.302-2.302-.588-.998-.882-2.072-.882-3.223h1.612c0 .87.214 1.672.643 2.408.428.735 1.01 1.317 1.746 1.746.735.428 1.538.643 2.408.643.87 0 1.672-.214 2.408-.643.735-.428 1.317-1.01 1.746-1.746.428-.735.643-1.538.643-2.408 0-.87-.214-1.672-.643-2.408-.428-.735-1.01-1.317-1.746-1.746-.735-.428-1.538-.643-2.408-.643v3.223l-4.01-4.01 4.01-4.01v3.223z" fill="rgb(0,212,250)"/></svg>') no-repeat center center;
+    background-size: contain
+}
+
+.exch1 .account-wrap .main-wallet.no-multi .a-refresh {
+    background-color: rgba(255,255,255,0.03);
+    border: 1px solid rgba(0,0,0,0.8)
+}
+
+.exch1 .account-wrap .head-refresh a {
+    background-position: -80px -2075px;
+    height: 25px;
+    width: 30px
+}
+
+.exch1 .account-wrap .account {
+    background-position: 0 -925px;
+    height: 25px;
+    width: 110px
+}
+
+.exch1 .account-wrap ul a {
+    color: #1E1E1E
+}
+
+.exch1 .account-wrap .logout a {
+    color: #fff
+}
+
+.exch1 .menu-wrap {
+    background-image: linear-gradient(
+        180deg
+        , #5f7fdb 0, #0cddff 100%);
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.75)
+}
+
+.exch1 .menu-wrap a.menu-drop:after {
+    border-top-color: #222
+}
+
+.exch1 .menu li,.exch1 .setting-wrap li {
+    border-right-color: rgba(69,32,7,0.2)
+}
+
+.exch1 .menu li ul a,.exch1 .setting-wrap li ul a {
+    color: #FFB80C
+}
+
+.exch1 .menu a,.exch1 .setting-wrap a {
+    color: #fff
+}
+
+.exch1 .menu a:hover,.exch1 .setting-wrap a:hover {
+    background-color: transparent;
+    text-decoration: underline
+}
+
+.exch1 .menu .select,.exch1 .setting-wrap .select {
+    box-shadow: inset 0 1px 3px 0 rgba(52,9,9,0.5);
+    background-image: linear-gradient(180deg, #123696 0%, #13a0dd 61%);
+    background-position: inherit
+}
+
+.exch1 .menu .tag-new,.exch1 .setting-wrap .tag-new {
+    color: var(--text-secondary)
+}
+
+.exch1 .setting {
+    border-left-color: rgba(69,32,7,0.2)
+}
+
+.exch1 .setting img {
+    background: url('data:image/svg+xml,<svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M6 8.106c.385 0 .745-.096 1.081-.289.336-.192.602-.45.8-.771a2.002 2.002 0 0 0 0-2.099 2.19 2.19 0 0 0-.8-.779A2.139 2.139 0 0 0 6 3.88c-.385 0-.743.096-1.074.288-.33.193-.594.452-.792.78a2.002 2.002 0 0 0 0 2.098c.198.322.462.579.792.771.331.193.689.289 1.074.289zm4.605-1.515l1.288.981c.06.048.094.11.104.188a.333.333 0 0 1-.044.216l-1.244 2.077a.269.269 0 0 1-.156.13.336.336 0 0 1-.214-.015l-1.526-.591c-.394.279-.745.476-1.05.591L7.54 11.74a.364.364 0 0 1-.111.188.272.272 0 0 1-.185.072H4.756a.29.29 0 0 1-.281-.26l-.237-1.572A3.752 3.752 0 0 1 3.2 9.577l-1.54.591c-.158.068-.28.03-.37-.115L.047 7.976a.333.333 0 0 1-.044-.216.278.278 0 0 1 .104-.188l1.303-.98A4.395 4.395 0 0 1 1.38 6c0-.26.01-.457.03-.591L.107 4.428a.278.278 0 0 1-.104-.188.333.333 0 0 1 .044-.216l1.244-2.077c.09-.144.212-.183.37-.115l1.54.591c.356-.26.701-.457 1.037-.591L4.475.26A.29.29 0 0 1 4.756 0h2.488c.069 0 .13.024.185.072.054.048.091.11.111.188l.222 1.572a3.87 3.87 0 0 1 1.051.591l1.526-.591a.336.336 0 0 1 .214-.015c.064.02.116.063.156.13l1.244 2.077c.04.067.054.14.044.216a.278.278 0 0 1-.104.188l-1.288.98c.02.135.03.332.03.592 0 .26-.01.457-.03.591z" fill="%23222" fill-rule="evenodd"/></svg>') no-repeat
+}
+
+.exch1 .one_click {
+    border-top-color: #fff;
+    color: var(--text-secondary) !important;
+    background-image: linear-gradient(0deg, #1B1B1B 19%, #444 87%);
+    background-position: inherit
+}
+
+.exch1 .one_click img {
+    background-position: -94px -4240px
+}
+
+.exch1 .one_click.select {
+    /* color: #1E1E1E !important; */
+    /* background-image: linear-gradient(180deg, #00C15D 0%, #009347 100%); */
+    background-position: inherit
+}
+
+.exch1 .one_click.select img {
+    background-position: -94px -4210px
+}
+
+.exch1 .one_click.select:hover {
+    background-image: linear-gradient(180deg, #05e3b9 0%, #273b46 100%)
+}
+
+.exch1 .one_click:hover {
+    color: #FFF;
+    background-image: linear-gradient(0deg, #444 19%, #1B1B1B 87%)
+}
+
+.exch1 .slip_set-pop a:hover,.exch1 .oneclick_set-pop a:hover {
+    text-decoration: none
+}
+
+.exch1 .slip_set-pop .btn-send,.exch1 .oneclick_set-pop .btn-send {
+    color: var(--text-secondary)
+}
+
+.exch1 .time_zone {
+    color: #000
+}
+
+.exch1 .time_zone span {
+    color: #fff
+}
+
+.exch1 .menu-list li {
+    border-bottom-color: #EFE1C1
+}
+
+.exch1 .menu-list a {
+    color: #222
+}
+
+.exch1 .menu-list a:hover {
+    background-color: #F2DCA7
+}
+
+.exch1 .menu-list .select {
+    background-color: #F2DCA7;
+    color: #222
+}
+
+.exch1 .menu-list .select:hover {
+    background-color: #F2DCA7
+}
+
+.exch1 .menu-list .Go {
+    background-position: 100% 0px;
+    height: 23px;
+    width: 23px
+}
+
+.exch1 .menu-list .Go:hover,.exch1 .menu-list .Go.Go-skyEX-hover {
+    background-position: 100% -1725px
+}
+
+.exch1 .path {
+    background: #222
+}
+
+.exch1 .path a {
+    color: var(--text-secondary)
+}
+
+.exch1 .path .path-back {
+    background-position: 0 -4125px;
+    height: 25px;
+    width: 36px
+}
+
+.exch1 .path .path-back:hover,.exch1 .path .path-back.path-back-skyEX-hover {
+    background-position: 0 -4150px
+}
+
+.exch1 .path .path-back.select {
+    background-position: 0 -4150px;
+    height: 25px;
+    width: 36px
+}
+
+.exch1 .path-pop {
+    background-color: #222
+}
+
+.exch1 .login_to_go {
+    background-image: var(--theme1-bg)
+}
+
+.exch1 .login_to_go .close {
+    background-position: -394px -1180px;
+    height: 20px;
+    width: 20px
+}
+
+.exch1 .one_click-setting {
+    color: #fff;
+    background-repeat: repeat-x;
+    background-color: #008841;
+    background-position: 0 -5203px
+}
+
+.exch1 .one_click-setting a {
+    border-color: #005F2D
+}
+
+.exch1 .one_click-setting .a-edit {
+    color: #1E1E1E
+}
+
+.exch1 .one_click-setting .a-edit img {
+    background-position: -405px -2269px;
+    height: 9px;
+    width: 9px
+}
+
+.exch1 .one_click-stake {
+    background-position: 0 -4568px;
+    height: 31px;
+    width: 414px
+}
+
+.exch1 .one_click-stake input,.exch1 .one_click-stake textarea {
+    border-color: #005F2D;
+    color: #fff;
+    background-color: #1F8C53
+}
+
+.exch1 .one_click-stake input:focus,.exch1 .one_click-stake textarea:focus {
+    border-color: #fff;
+    background-color: #00632F
+}
+
+.exch1 .menu .logout,.exch1 .setting-wrap .logout {
+    border-left-width: 0
+}
+
+.exch1 .menu .logout img,.exch1 .setting-wrap .logout img {
+    background: url('data:image/svg+xml,<svg width="10" height="11" xmlns="http://www.w3.org/2000/svg"><path d="M5.71 7.706l1.432-1.604H1.778V4.898h5.39L5.71 3.294l.781-.86L9.278 5.5 6.49 8.565l-.78-.86zM1.12 0C.825 0 .564.124.339.372a1.24 1.24 0 0 0-.339.86v8.536c0 .325.113.611.339.86.225.248.486.372.78.372H8.88c.295 0 .556-.124.781-.372a1.24 1.24 0 0 0 .339-.86V7.333H8.88v2.435H1.12V1.232h7.76v2.435H10V1.232a1.24 1.24 0 0 0-.339-.86C9.436.124 9.175 0 8.881 0H1.12z" fill="%23222" fill-rule="evenodd"/></svg>') no-repeat
+}
+
+.exch1 .footer_fixed .main_wrap,.exch1 .footer_fixed .header {
+    background-color: #F0ECE1
+}
+
+.exch1 .submit-wrap .btn-send span {
+    background-color: #666
+}
+

@@ -1,0 +1,24 @@
+<div class="announce-wrap marquee-pop">
+    <div class="announce-header">
+        <h1>Announcement</h1>
+    </div>
+    <div class="function-wrap">
+    </div>
+    <div class="announce-content" id="announcementContent" *ngIf="isLogin">
+        <div id="announcementTemplate" class="article-wrap">
+            <p id="textByLanguageType_0" *ngIf="siteName=='runexchange'">Welcome to Runexch. বাংলাদেশের সব থেকে বিশ্বস্ত
+                সাইট।</p>
+                <p id="textByLanguageType_0" *ngIf="siteName=='lc365' || siteName=='lc247'">সর্বোত্তম আপডেটের জন্য সাইটটি সকাল 6:30 থেকে রক্ষণাবেক্ষণের অধীনে থাকবে</p>
+            <p id="textByLanguageType_0"
+                *ngIf="siteName=='velkiex' || siteName=='wicket7' || siteName=='baji365' || siteName=='nayaludis' || siteName=='betbuz365' || siteName=='maza247' || siteName=='gamex'">
+                আমাদের সাইট এ কোন প্রকার VPN ব্যবহার করে বাজি ধরা যাবে না। যদি VPN ব্যবহারকারি ধরা পরে তা হলে তার ID
+                বন্ধ করে দেয়া হবে। এ জন্য আপাদের আপলাইন কোন প্রকার দায়ভার নিবে না।</p>
+            <p id="textByLanguageType_0">{{news}} {{vnews?' | '+vnews:''}}</p>
+        </div>
+    </div>
+    <div class="announce-content" id="announcementContent" *ngIf="!isLogin && siteName=='winplus247'">
+        <div id="announcementTemplate" class="article-wrap">
+            <p id="textByLanguageType_0"> Welcome to Winplus247. Bonus promotion will open again soon.</p>
+        </div>
+    </div>
+</div>

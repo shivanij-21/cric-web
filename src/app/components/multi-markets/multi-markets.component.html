@@ -1,0 +1,777 @@
+<div id="overWrap" class="over-wrap" style="height: calc(100% - 0px)">
+    <div class="kv-wrap" style="display:none;">
+        <img src="assets/images/kv/KV.jpg" alt="">
+    </div>
+
+    <!-- Horse Coming Up Start -->
+    <div class="upcome-wrap" id="upcomingHorseRace" style="display:none;">
+        <dl class="upcome-head" id="next">
+            <dt id="nextHeader">Next Horse Race</dt>
+        </dl>
+
+        <dl class="upcome" id="upcoming">
+            <dt id="upcomeHeader">Coming Up</dt>
+        </dl>
+    </div>
+    <dl id="upcomingRaceTempLate" style="display:none;">
+        <dd>
+            <a href="#"></a>
+            <span></span>
+        </dd>
+    </dl>
+    <!-- Horse Coming Up End -->
+
+    <!-- Markets Closed Wrap -->
+    <div id="marketClosedWrap" class="closed-wrap" style="display: none;">
+        <div class="closed-next">
+            <h2>This race has ended</h2>
+            
+        </div>
+    </div>
+    
+    <!-- Game Bets Table -->
+    <div id="fullMarketBetsWrap" class="bets-wrap" style="display: none;">
+    
+        <span id="selectionCounts" class="refer_only">For reference only</span>
+    
+        <table id="fullMarketBoard" class="bets">
+            <tbody><tr class="bet-all">
+                <td></td>
+                <td id="backPercent" class="refer-bet" colspan="2"></td>
+                <td><a id="backAll" class="back-all"><img src="assets/images/transparent.gif"><span>Back all</span></a></td>
+                <td><a id="layAll" class="lay-all"><img src="assets/images/transparent.gif"><span>Lay all</span></a></td>
+                <td id="layPercent" class="refer-book" colspan="2"></td>
+            </tr>
+            
+            <tr id="fullSelectionTemplate" style="display: none;">
+                <th>
+                       
+                       <dl id="horseInfo" class="horse-info" style="display: none;">
+                        <dt>
+                            <a id="marketDepthBtn" href="#"><img class="icon-predict" src="assets/images/transparent.gif"></a>
+                            <ul id="horseBox" class="horse-box">
+                                <li id="clothNumberAlpha"></li>
+                                <li id="stallDraw"></li>
+                            </ul>
+                            <div id="uniform" class="uniform"><img src=""></div>
+                        </dt>
+                        <dd>
+                            <ul id="horseName" class="horse-name">
+                                <li id="runnerName"></li>
+                                <li id="jockyName"></li>
+                            </ul>
+                            <dl id="horseInfoHover" class="horse_info-hover">
+                                <dt>Trainer:</dt>
+                                <dd id="trainerName"></dd>
+                                <dt>Age/Weight:</dt>
+                                <dd id="ageWeight"></dd>
+                                <dt>Form:</dt>
+                                <dd id="form"></dd>
+                                <dt>Days since last run:</dt>
+                                <dd id="daysSinceLastRun"></dd>
+                                <dt>Jockey claim:</dt>
+                                <dd id="jockeyClam"></dd>
+                                <dt>Wearning:</dt>
+                                <dd id="wearing"></dd>
+                            </dl>
+                        </dd>
+                    </dl>
+                    
+                    <p></p>
+                    <span id="withoutBet" class="win" style="display: none;"></span>
+                    <span id="lossWithoutBet" class="win" style="display: none;"></span>
+                    <span id="withBet" class="win" style="display: none;"></span>
+                    <span id="lossWithBet" class="win" style="display: none;"></span>
+                    <span id="zeroProfit" class="win" style="display: none;"></span>
+                    <span id="zeroLiability" class="win" style="display: none;"></span>
+                    <span id="zeroProfitWithBet" class="win" style="display: none;"></span>
+                    <span id="zeroLiabilityWithBet" class="win" style="display: none;"></span>
+                </th>
+                <td id="suspend" colspan="6" class="suspend" style="display: none;"><span>Suspend</span></td>
+                <td id="closed" colspan="6" class="suspend" style="display: none;"><span>Closed</span></td>
+                <td id="nonRunner" colspan="6" class="suspend" style="display: none;"><span>Non Runner</span></td>
+                <td id="back_3" class="back-3" side="Back"><a style="cursor:pointer;"><span></span></a></td>
+                <td id="back_2" class="back-2" side="Back"><a style="cursor:pointer;"><span></span></a></td>
+                <td id="back_1" class="back-1" side="Back"><a style="cursor:pointer;"><span></span></a></td>
+                <td id="lay_1" class="lay-1" side="Lay"><a style="cursor:pointer;"><span></span></a></td>
+                <td id="lay_2" class="lay-2" side="Lay"><a style="cursor:pointer;"><span></span></a></td>
+                <td id="lay_3" class="lay-3" side="Lay"><a style="cursor:pointer;"><span></span></a></td>
+                <td id="horseGreyOut" colspan="3" class="suspend" style="display: none;"></td>
+            </tr>
+        </tbody></table>
+    
+    </div>
+    
+    <div id="multiMarketsWrap" style="">
+
+        <h2 id="header">Multi Markets</h2>
+    
+        <p id="noMultiMarkets" style="">There are currently no followed multi markets.</p>
+    
+        <!-- Game Bets Table -->
+        <div id="multiMarketsTemplate" class="game-wrap" style="display: none;">
+            <h3 class="multi_h3">
+                <a id="multiMarketPin" class="add-pin" style="cursor: pointer" title="Add to Multi Markets"></a>
+                <a id="multiMarketRefresh" class="multi_refresh" style="cursor: pointer"></a>
+                <a id="eventHeader" class="multi_name" style="cursor: pointer">
+                    <span id="marketName" class="multi-event_type"></span>
+                    
+                    
+                </a>
+                <span id="lowLiquidityTag" class="game-low_liq" style="display: none;">Low Liquidity</span>
+            </h3>
+    
+            <div id="multiMarketBetsWrap" class="bets-wrap">
+    
+                <span id="selectionCounts" class="refer_only">For reference only</span>
+    
+                <div id="multiMarketLoading" class="loading-wrap multi-load" style="display:none;">
+                        <ul class="loading">
+                            <li><img src="assets/images/loading40.gif"></li>
+                            <li>Loading...</li>
+                        </ul>
+                    </div><table id="multiMarketBoard" class="bets">
+    
+                    
+                    
+    
+                    <tbody>
+                        <tr class="bet-all">
+                            <td></td>
+                            <td id="backPercent" class="refer-bet" colspan="2"></td>
+                            <td><a id="backAll" class="back-all"><img src="assets/images/transparent.gif"><span>Back all</span></a></td>
+                            <td><a id="layAll" class="lay-all"><img src="assets/images/transparent.gif"><span>Lay all</span></a></td>
+                            <td id="layPercent" class="refer-book" colspan="2"></td>
+                        </tr>
+                    </tbody>
+                </table>
+    
+            </div>
+        </div>
+
+        
+<div class="game-wrap" id="bookMakerTableTemplate" style="display: none;">
+
+<h3 id="bookMakerHead" class="multi_h3">
+<a href="#" id="multiMarketPin" class="delete-pin" title="Remove from Multi Markets">Add Pin</a>
+<a id="multiMarketRefresh" class="multi_refresh" href="#">Refresh</a>
+<a class="multi_name" href="#">
+     <span id="eventName">England vs Sri Lanka</span> <span class="game-bookmaker">BookMaker</span>
+     
+</a>
+<dl class="fancy-info">
+    <dt><span>Min</span></dt>
+    <dd id="min">100.00</dd>
+    <dt><span>Max</span></dt>
+    <dd id="max">10000.00</dd>
+    <dt id="rebateName"><span>Rebate</span></dt>
+    <dd id="rebate"></dd>
+</dl>
+</h3>
+<div id="bookMakerWrap" class="bets-wrap fancy_bet bookmaker_bet">
+
+
+<div id="multiMarketLoading" class="loading-wrap multi-load" style="display:none;">
+<ul class="loading">
+    <li><img src="assets/images/loading40.gif"></li>
+    <li>Loading...</li>
+</ul>
+</div>	
+
+<p id="bookMakerNoBet" class="no_bet" style="display:none;"></p>
+
+<table id="bookMakerMarketList" class="bets bets-bookmaker">
+<colgroup>
+<col span="1" width="280">
+<col span="1" width="70">
+<col span="1" width="70">
+<col span="1" width="70">
+<col span="1" width="70">
+<col span="1" width="70">
+<col span="1" width="70">
+</colgroup>
+
+</table><table id="bookMakerTempTable" style="display: none">
+    <tbody id="bookMakerMarketTemplate">
+    <tr class="colgroup-adjust">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="bet-all">
+        <td colspan="3"></td>
+        <!-- <td class="refer-bet"></td> -->
+        <td>Back</td>
+        <td>Lay</td>
+        <td class="refer-book" colspan="2"></td>
+    </tr>
+    </tbody>
+
+    <tbody><tr id="bookMakerSelectionTemplate" style="display:none;">
+        <th class="predict">
+            <p id="runnerName">
+                <a onclick="window.open('market_depth.html','_blank', config='height=600,width=920,location=no');"><img class="icon-predict" src="assets/images/transparent.gif"></a></p>
+            <span id="before" class="win" style="display: none;"></span>
+            <span id="after" class="to-lose" style="display: none;"></span>
+        </th>
+        <td class="" colspan="3">
+            <dl class="back-gradient">
+                <dd id="back_3" style="cursor: pointer"><p></p></dd>
+                <dd id="back_2" style="cursor: pointer"><p></p></dd>
+                <dd id="back_1" style="cursor: pointer"><a></a></dd>
+            </dl>
+        </td>
+        <td class="" colspan="3">
+            <dl class="lay-gradient">
+                <dd id="lay_1" style="cursor: pointer"><a></a></dd>
+                <dd id="lay_2" style="cursor: pointer"><p></p></dd>
+                <dd id="lay_3" style="cursor: pointer"><p></p></dd>
+            </dl>
+        </td>
+    </tr>
+
+    <tr id="suspendTemplate" class="fancy-suspend-tr" style="display: none">
+        <th colspan=""></th>
+        <td class="fancy-suspend-td" colspan="6">
+            <div id="suspendClass" class="fancy-suspend"><span class="info">Suspend</span></div>
+        </td>
+    </tr>
+
+    <tr id="delayTemplate" class="fancy-suspend-tr" style="display: none;">
+        <th></th>
+        <td colspan="2"></td>
+        <td class="fancy-suspend-td" colspan="2">
+            <div class="fancy-suspend"><span class="info">Delay Betting</span></div>
+        </td>
+        <td colspan="2"></td>
+    </tr>
+
+    <tr id="bookMakerBetTemplate" class="fancy-quick-tr" style="display: none;">
+        <td colspan="7">
+            <dl id="classWrap" class="quick_bet-wrap slip-back">
+                <dt id="bookMakerBetHeader" class="">
+                    
+                    <span id="bookMakerBetAcceptCheck" class="bet-check">
+                        <input id="bookMakerBetAcceptAnyOdds" type="checkbox">
+                        <label for="bookMakerBetAcceptAnyOdds">Accept Any Odds</label>
+                    </span>
+                    
+                </dt>
+                <dd class="col-btn"><a id="cancel" class="btn" style="cursor:pointer;">Cancel
+                </a></dd>
+                <dd id="oddsHeader" class="col-odd">
+                    <ul class="quick-bet-confirm">
+                        <li id="odds"></li>
+                    </ul>
+                </dd>
+                <dd class="col-stake">
+                    <input id="inputStake" type="text" value="">
+                </dd>
+                <dd class="col-send">
+                    <a id="placeBet" class="btn-send disable" style="cursor:pointer;">Place Bets
+                    </a>
+                </dd>
+            </dl>
+        </td>
+    </tr>
+
+    <tr id="bookMakerBetBarTemplate" class="fancy-quick-tr" style="display: none;">
+        <td colspan="7">
+            <dl class="quick_bet-wrap quick_bet-progress">
+                <dd id="progressBar" class="progress-bar" style="width: 0%;"></dd>
+                <dd class="progress-bar-txt">Placing your bets, Please wait <span id="secRemain">0 sec remaining…</span>
+                </dd>
+            </dl>
+        </td>
+    </tr>
+
+    <tr id="bookMakerBetMessageTemplate" class="fancy-quick-tr" style="display: none;">
+        <td colspan="7">
+            <dl id="classWrap" class="quick_bet-wrap quick_bet-message success">
+                <dd class="info">
+                    <strong id="header">Bet Matched</strong>
+                    USD$ at odds Profit:
+                    <a id="close" class="btn-close" style="cursor:pointer;">Close</a>
+                </dd>
+            </dl>
+        </td>
+    </tr>
+</tbody></table>
+
+</div>
+</div>
+        
+<div class="game-wrap" id="fancyBetTableTemplate" style="display: none;">
+
+<h3 id="fancyBetHead" class="multi_h3">
+<a href="#" id="multiMarketPin" class="delete-pin" title="Remove from Multi Markets">Add Pin</a>
+<a id="multiMarketRefresh" class="multi_refresh" href="#">Refresh</a>
+<a class="multi_name" href="#">
+     <span id="eventName">England vs Sri Lanka</span> <span class="game-fancy">Fancy Bet</span>
+     
+</a>
+</h3>
+<div id="fancyBetWrap" class="bets-wrap fancy_bet">
+
+
+<div id="multiMarketLoading" class="loading-wrap multi-load" style="display:none;">
+<ul class="loading">
+    <li><img src="assets/images/loading40.gif"></li>
+    <li>Loading...</li>
+</ul>
+</div>	
+
+<p id="fancyBetNoBet" class="no_bet" style="display:none;"></p>
+
+<table id="fancyBetMarketList" class="bets" style="display: none;">
+<colgroup>
+    <col span="1" width="280">
+    <col span="1" width="70">
+    <col span="1" width="70">
+    <col span="1" width="70">
+    <col span="1" width="70">
+    <col span="1" width="70">
+    <col span="1" width="70">
+</colgroup>
+<tbody>
+    <tr class="colgroup-adjust">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="bet-all">
+        <td></td>
+        <td class="refer-bet" colspan="2"></td>
+        <td>No</td>
+        <td>Yes</td>
+        <td class="refer-book" colspan="2"></td>
+    </tr>
+    
+    
+    <tr id="suspendTemplate" class="fancy-suspend-tr" style="display: none;">
+        <th></th>
+        <td colspan="2"></td>
+        <td class="fancy-suspend-td" colspan="2">
+            <div id="suspendClass" class="fancy-suspend"><span class="info">Ball Running</span></div>
+        </td>
+        <td colspan="2"></td>
+    </tr>
+    
+    <tr id="delayTemplate" class="fancy-suspend-tr" style="display: none;">
+        <th></th>
+        <td colspan="2"></td>
+        <td class="fancy-suspend-td" colspan="2">
+            <div class="fancy-suspend"><span class="info">Delay Betting</span></div>
+        </td>
+        <td colspan="2"></td>
+    </tr>
+                                
+    
+    <tr id="fancyBetMarketTemplate" style="display: none;">
+        <th colspan="3">
+            <dl class="fancy-th-layout">
+                <dt>
+                    <p id="marketName"></p>
+                    <span id="before" class="win" style="display: none;"></span>
+                    <span id="after" class="to-lose" style="display: none;"></span>
+                </dt>
+                <dd class="dd-tips">
+                    <ul class="fancy-tips">
+                        <li id="remarkFirstRow" style="display: none;"></li>
+                        <li id="remarkSecondRow" style="display: none;"></li>
+                    </ul>
+                    <a id="fancyBetBookBtn" class="btn-book" style="display: none;">Book</a>
+                </dd>
+            </dl>
+        </th>
+        <td id="lay_1" class="lay-1">
+            <a id="runsInfo" style="cursor: pointer"><span></span></a>	
+        </td>
+        <td id="back_1" class="back-1">
+            <a id="runsInfo" style="cursor: pointer"><span></span></a>	
+        </td>
+        <td class="td-fancy_merge" colspan="2">
+            <dl class="fancy-info">
+                <dt>Min/Max</dt>
+                <dd id="minMax"></dd>
+            </dl>
+            <dl class="fancy-info">
+                <dt id="rebateName">Rebate</dt>
+                <dd id="rebate"></dd>
+            </dl>
+        </td>
+    </tr>
+    
+    
+    <tr id="fancyBetSingleBetMarketTemplate" style="display: none;">
+        <th colspan="3">
+            <dl class="fancy-th-layout">
+                <dt>
+                    <p id="marketName"></p>
+                    <span id="before" class="win" style="display: none;"></span>
+                    <span id="after" class="to-lose" style="display: none;"></span>
+                </dt>
+                <dd class="dd-tips">
+                    <ul class="fancy-tips">
+                        <li id="remarkFirstRow" style="display: none;"></li>
+                        <li id="remarkSecondRow" style="display: none;"></li>
+                    </ul>
+                    <a id="fancyBetBookBtn" class="btn-book" style="display: none;">Book</a>
+                </dd>
+            </dl>
+        </th>
+        <td id="clickToBet" class="back-1 single-bet" colspan="2">
+            <a id="oddsInfo" href="#">
+                <span>odds</span>
+            </a>	
+        </td>
+        <td class="td-fancy_merge" colspan="2">
+            <dl class="fancy-info">
+                <dt>Min/Max</dt>
+                <dd id="minMax"></dd>
+            </dl>
+            <dl class="fancy-info">
+            </dl>
+        </td>
+    </tr>
+    
+    <!-- multi selection for fancybet -->
+    <tr id="fancyBeThreeSelectionsMarketTemplate" style="display: none;">
+        <th colspan="3">
+            <dl class="fancy-th-layout">
+                <dt>
+                    <p id="marketName"></p>
+                    <span id="before" class="win" style="display: none;"></span>
+                    <span id="after" class="to-lose" style="display: none;"></span>
+                </dt>
+                <dd class="dd-tips">
+                    <ul class="fancy-tips">
+                        <li id="remarkFirstRow" style="display: none;"></li>
+                        <li id="remarkSecondRow" style="display: none;"></li>
+                    </ul>
+                    <a id="fancyBetBookBtn" class="btn-book" style="display: none;">Book</a>
+                </dd>
+            </dl>
+        </th>
+        <!--td colspan="2" class="multi_select multi_suspend"-->
+        <td colspan="2" class="multi_select" id="multi_select">
+            <!-- <div class="multi_suspend">
+                <span>Suspend</span>
+            </div> -->
+            <ul>
+                <li class="lay-1" id="lay_1">
+                    <a id="runsInfo" style="cursor: pointer"><span></span></a>
+                </li>
+
+                <li class="back-1" id="back_1">
+                    <a id="runsInfo" style="cursor: pointer"><span></span></a>	
+                </li>
+            </ul>
+            <ul>
+                <li class="lay-1" id="lay_1">
+                    <a id="runsInfo" style="cursor: pointer"><span></span></a>
+                </li>
+
+                <li class="back-1" id="back_1">
+                    <a id="runsInfo" style="cursor: pointer"><span></span></a>
+                </li>
+            </ul>
+            <ul>
+                <li class="lay-1" id="lay_1">
+                    <a id="runsInfo" style="cursor: pointer"><span></span></a>
+                </li>
+
+                <li class="back-1" id="back_1">
+                    <a id="runsInfo" style="cursor: pointer"><span></span></a>
+                </li>
+            </ul>
+        </td>
+        <td class="td-fancy_merge" colspan="2">
+            <dl class="fancy-info">
+                <dt>Min/Max</dt>
+                <dd id="minMax"></dd>
+            </dl>
+            <dl class="fancy-info">
+                <dt id="rebateName">Rebate</dt>
+                <dd id="rebate"></dd>
+            </dl>
+        </td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<table id="tempTable" style="display: none;">
+<tbody>
+
+<tr id="fancyBetTemplate" class="fancy-quick-tr" style="display: none;">
+<td colspan="7">
+    <dl id="classWrap" class="quick_bet-wrap slip-back">
+        <dt id="fancyBetHeader" class="">
+            
+            <span id="fancyBetAcceptCheck" class="bet-check">
+                <input id="fancyBetAcceptAnyOdds" type="checkbox">
+                <label for="fancyBetAcceptAnyOdds">Accept Any Odds</label>
+            </span>
+            
+        </dt>
+        <dd class="col-btn"><a id="cancel" class="btn" style="cursor:pointer;">Cancel</a></dd>
+        <dd id="oddsHeader" class="col-odd">
+            <ul class="quick-bet-confirm">
+                <li id="runs"></li>
+                <li id="odds" class="quick-bet-confirm-title"></li>
+            </ul>
+        </dd>
+        <dd class="col-stake">
+            <input id="inputStake" type="text" value="">
+        </dd>
+        <dd class="col-send">
+            <a id="placeBet" class="btn-send disable" style="cursor:pointer;">Place Bets</a>
+        </dd>
+    </dl>
+</td>
+</tr>
+
+
+<tr id="fancyBetBarTemplate" class="fancy-quick-tr" style="display: none;">
+<td colspan="7">
+    <dl class="quick_bet-wrap quick_bet-progress">
+        <dd id="progressBar" class="progress-bar" style="width: 0%;"></dd>
+        <dd class="progress-bar-txt">Placing your bets, Please wait <span id="secRemain">0 sec remainingâ¦</span></dd>
+    </dl>
+</td>
+</tr>
+
+
+<tr id="fancyBetMessageTemplate" class="fancy-quick-tr" style="display: none;">
+<td colspan="7">
+    <dl id="classWrap" class="quick_bet-wrap quick_bet-message success">
+        <dd class="info">
+            <strong id="header">Bet Matched</strong>
+            USD$ at odds Profit:
+            <a id="close" class="btn-close" style="cursor:pointer;">Close</a>
+        </dd>
+    </dl>
+</td>
+</tr>
+
+
+<!-- lottery Fancy bet quick-->
+<tr id="fancyBetLotteryTemplate" class="fancy-quick-tr bet-lottery" style="display: none;">
+<td colspan="7">
+    <!-- Quick Bet Wrap -->
+    <dl class="quick_bet-wrap slip-back">
+        <dt></dt>
+        <dd class="col-btn"><a id="cancel" class="btn" style="cursor:pointer;">Cancel</a></dd>
+        <dd id="lotteryBall" class="lottery-ball">
+            <a id="lotteryNo_0">0</a>
+            <a id="lotteryNo_1">1</a>
+            <a id="lotteryNo_2">2</a>
+            <a id="lotteryNo_3">3</a>
+            <a id="lotteryNo_4">4</a>
+            <a id="lotteryNo_5">5</a>
+            <a id="lotteryNo_6">6</a>
+            <a id="lotteryNo_7">7</a>
+            <a id="lotteryNo_8">8</a>
+            <a id="lotteryNo_9">9</a>
+        </dd>
+        <dd class="col-stake">
+            <input id="inputStake" type="text" value="">
+        </dd>
+        <dd class="col-send">
+            <a id="placeBet" class="btn-send disable" style="cursor:pointer;">Place Bets</a>
+        </dd>
+    </dl>
+    <!-- Quick Bet Wrap End -->
+</td>
+</tr>
+<!-- lottery end -->
+
+<!-- khadda Fancy bet quick-->
+<tr id="fancyBetKhaddaTemplate" class="fancy-quick-tr bet-khadda">
+<td colspan="7">
+    <!-- Quick Bet Wrap -->
+    <dl class="quick_bet-wrap slip-back">
+        <dt></dt>
+        <dd class="col-btn"><a id="cancel" class="btn" style="cursor:pointer;">Cancel</a></dd>
+        <!-- Runs -->
+        <dd class="col-stake">
+            <input id="inputRuns" type="text" maxlength="3">
+        </dd>
+        <dd class="col-odd">
+            <ul class="quick-bet-confirm">
+                <li id="extendedRuns"></li>
+            </ul>
+        </dd>
+        <dd class="col-runs">
+            Runs
+        </dd>
+
+        <dd class="col-stake">
+            <input id="inputStake" type="text" value="">
+        </dd>
+        <dd class="col-send">
+            <a id="placeBet" class="btn-send disable" style="cursor:pointer;">Place Bets</a>
+        </dd>
+    </dl>
+    <!-- Quick Bet Wrap End -->
+</td>
+</tr>
+<!-- Khadda end -->
+</tbody>
+</table>
+        <div id="sportsBookWrap" style="display: none;">
+
+<div class="game-wrap" id="sportsBookTableTemplate" style="display: none;">
+
+<h3 id="sportsBookHead" class="multi_h3">
+<a href="#" id="multiMarketPin" class="delete-pin" title="Remove from Multi Markets">Add Pin</a>
+<a id="multiMarketRefresh" class="multi_refresh" href="#">Refresh</a>
+<a class="multi_name" href="#">
+     <span id="eventName">England vs Sri Lanka</span>
+     <span id="sportsBookEIcon_1" class="game-E" style="display: none;"><i></i>Soccer</span>
+     <span id="sportsBookEIcon_4" class="game-E" style="display: none;"><i></i>Cricket</span>
+     <span id="sportsBookEIcon_2" class="game-E" style="display: none;"><i></i>Tennis</span>
+     <span id="icon" class="game-sportsbook">Sportsbook</span>
+     <span id="marketName" class="multi-event_type">Match Odds</span>
+</a>
+</h3>
+<div class="bets-wrap sportsbook_bet">
+
+<div id="multiMarketLoading" class="loading-wrap multi-load" style="display:none;">
+<ul class="loading">
+    <li><img src="assets/images/loading40.gif"></li>
+    <li>Loading...</li>
+</ul>
+</div>
+<!-- Sportsbook bet head end -->
+<p id="sportsBookNoBet" class="no_bet" style="display: none;">has no Sports Book market </p>
+<table id="sportsBookMarketTemplate" class="bets" style="display: none;">
+<colgroup>
+    <col span="1" width="280">
+    <col span="1" width="70">
+    <col span="1" width="70">
+    <col span="1" width="70">
+    <col span="1" width="70">
+    <col span="1" width="70">
+    <col span="1" width="70">
+</colgroup>
+<tbody>
+    <tr class="colgroup-adjust">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="special_bet">
+        <td colspan="7"></td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+
+<table id="sportsBookTemplateTable" class="bets" style="display: none;">
+<tbody>
+    <tr id="sportsBookSelectionTemplate" style="display: none;">
+        <th class="" colspan="3">
+            <dl class="fancy-th-layout">
+                <dt>
+                    <p id="selectionName"></p>
+                    <span id="before" class="win" style="display: none;"></span>
+                    <span id="after" class="to-lose" style="display: none;"></span>
+                </dt>
+            </dl>
+        </th>
+        <td id="back_1" class="back-1 no-liq" colspan="2">
+            <a class="info"><span></span></a>
+        </td>
+        <td class="refer-book" colspan="2"></td>
+    </tr>
+    
+    <!-- Sportsbook bet quick-->
+    <tr id="sportsBookBetTemplate" class="fancy-quick-tr" style="display: none;">
+        <td colspan="7">
+            <!-- Quick Bet Wrap -->
+            <dl class="quick_bet-wrap slip-book">
+                <dt id="sportsBookBetHeader" class="">
+                    
+                    <span id="sportsBookAcceptCheck" class="bet-check">
+                        <input id="sportsBookAcceptAnyOdds" type="checkbox">
+                        <label for="sportsBookAcceptAnyOdds">Accept Any Odds</label>
+                    </span>
+                    
+                    <span id="sportsBookMaxStake" class="max-bet"><a id="getSportsBookMaxStakeBtn" href="#">Max</a></span>
+                </dt>
+                <dd class="col-btn"><a id="cancel" class="btn">Cancel</a></dd>
+                <dd id="oddsHeader" class="col-odd">
+                    <ul class="quick-bet-confirm">
+                        <li id="odds"></li>
+                        <li class="quick-bet-confirm-title">odds</li>
+                    </ul>
+                </dd>
+                <dd class="col-stake">
+                    <input id="inputStake" type="text">
+                </dd>
+                <dd class="col-send">
+                    <a id="placeBet" class="btn-send">Place Bets</a>
+                </dd>
+            </dl>
+            <!-- Quick Bet Wrap End -->
+        </td>
+    </tr>
+
+    <!-- Sportsbook bet quick bet mode-->
+    <tr id="sportsBookBetBarTemplate" class="fancy-quick-tr" style="display: none;">
+        <td colspan="7">
+            <!-- Quick Bet Wrap Progress -->
+            <dl class="quick_bet-wrap quick_bet-progress">
+                <dd id="progressBar" class="progress-bar" style="width: 0%;"></dd>
+                <dd class="progress-bar-txt">Placing your bets, Please wait <span>4 sec remaining…</span></dd>
+            </dl>
+            <!-- Quick Bet Wrap End -->
+        </td>
+    </tr>
+
+    <!-- Sportsbook bet pause status-->
+    <tr id="sportsBookSuspendTemplate" class="fancy-suspend-tr" style="display: none;">
+        <th colspan="3"></th>
+        <td class="fancy-suspend-td" colspan="2">
+            <div id="suspendClass" class="fancy-suspend-white"><span>Ball Run</span></div>
+        </td>
+        <td colspan="2"></td>
+    </tr>
+
+    <!-- Sportsbook bet quick bet mode-->
+    <tr id="sportsBookBetMessageTemplate" class="fancy-quick-tr" style="display: none;">
+        <td colspan="7">
+            <!-- Quick Bet Wrap Message -->
+            <dl id="classWrap" class="quick_bet-wrap quick_bet-message">
+                <dd class="info">
+                    <strong id="header">Bet Matched</strong>
+                    USD$1,000 at odds 1.27 Profit: $5,800.00
+                    <a id="close" class="btn-close">Close</a>
+                </dd>
+            </dl>
+            <!-- Quick Bet Wrap End -->
+        </td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+    </div>
+    
+</div>

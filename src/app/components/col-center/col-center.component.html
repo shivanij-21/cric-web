@@ -1,0 +1,15 @@
+
+<div id="centerColumn" style="z-index: 0;" class="col-center" [ngClass]="{'gamehall':isHome,'gamehallcasino':iscasino,'inplay':isInplay,'markets':isMarkets}">
+  <!-- <div id="page_loading" class="loading-wrap" style="display: none;">
+        <ul class="loading">
+          <li *ngIf="siteName!='lc247' && siteName!='lc365'"><img src="assets/images/loading40.gif"></li>
+          <li *ngIf="siteName=='lc247' || siteName=='lc365'"><img src="assets/images/loading42.gif" style="height: 35px;"></li>
+
+          <li>Loading...</li>
+        </ul>
+      </div> -->
+    <app-marquee *ngIf="isLogin"></app-marquee>
+    <app-marquee *ngIf="!isLogin && siteName=='winplus247'"></app-marquee>
+    <router-outlet></router-outlet>
+    <app-one-click-wrap></app-one-click-wrap>
+</div>

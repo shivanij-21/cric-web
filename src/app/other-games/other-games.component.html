@@ -1,0 +1,35 @@
+<div id="overWrap" class="over-wrap" style="height: calc(100% - 26px)">
+    <div class="gamehall-wrap-simple">
+        <a style="cursor: pointer" [routerLink]="['/sport/52']">
+            <dl class="entrance-title">
+                <dt>Kabaddi</dt>
+                <dd>Play Now</dd>
+            </dl>
+            <img src="assets/images/mobile/gamehall/banner_kabaddi.png" alt="" draggable="false">
+        </a>
+        <a  *ngIf="!isLogin" class="entrance" style="cursor: pointer" (click)="openLoginPop()">
+            <dl class="entrance-title">
+                <dt>Horse Book</dt>
+                <dd>Play Now</dd>
+            </dl>
+            <img src="assets/images/mobile/gamehall/banner_horse.png" alt="" draggable="false">
+        </a>
+        <a *ngIf="isLogin" class="entrance" style="cursor: pointer" [routerLink]="['/races/7']">
+            <dl class="entrance-title">
+                <dt>Horse Book</dt>
+                <dd>Play Now</dd>
+            </dl>
+            <img src="assets/images/mobile/gamehall/banner_horse.png" alt="" draggable="false">
+        </a>
+        <ng-container *ngIf="siteName=='lc247' || siteName=='lc365'">
+            <a [ngClass]="{'entrance-half':!awc.isBig}" (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+                *ngFor="let awc of awcCasinoList_bdbet">
+                <dl class="entrance-title">
+                    <dt>{{awc.name | titlecase}}</dt>
+                    <dd>Play Now</dd>
+                </dl>
+                <img src="assets/images/awc_banner/awc_bdbet/{{awc.name}}.jpeg" alt="" draggable="false">
+            </a>
+        </ng-container>
+    </div>
+</div>

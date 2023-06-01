@@ -1,0 +1,58 @@
+<div id="overWrap" class="over-wrap" style="height: calc(100% - 26px)">
+    <div class="casino-box-tabs">
+        <div class="casino-tabs-menu">
+            <a (click)="scrollLeft()" class="arrow-tabs arrow-left"><i class="fas fa-chevron-left"></i></a>
+            <ul #tab1 class="nav nav-pills scroll">
+                <li class="nav-item" *ngFor="let pro of providerList" routerLink="/casino/supernowa-casino/{{pro.providerCode}}"><a href="javascript:void(0)" class="nav-link" [ngClass]="pro.providerCode == providerCode?'active':'null'">
+                    <img
+                            src="/assets/images/supernowa/{{pro.providerCode}}.png">
+                        <span>{{pro.providerName}}</span></a></li>
+                <!-- <li class="nav-item"><a href="javascript:void(0)" class="nav-link active"><img
+                            src="https://sitethemedata.com/v96/static/front/img/icons/19.png"> <span>Our
+                            Virtual</span></a></li>
+                <li class="nav-item"><a href="javascript:void(0)" class="nav-link"><img
+                            src="https://sitethemedata.com/v96/static/front/img/icons/24.png">
+                        <span>Creedroomz</span></a></li>
+                <li class="nav-item"><a href="javascript:void(0)" class="nav-link"><img
+                            src="https://sitethemedata.com/v96/static/front/img/icons/31.png"> <span>BOTA</span></a>
+                </li>
+                <li class="nav-item"><a href="javascript:void(0)" class="nav-link"><img
+                            src="https://sitethemedata.com/v96/static/front/img/icons/22.png"> <span>Astar
+                            Game</span></a></li>
+                <li class="nav-item"><a href="javascript:void(0)" class="nav-link"><img
+                            src="https://sitethemedata.com/v96/static/front/img/icons/21.png"> <span>Vivo
+                            Gaming</span></a></li>
+                <li class="nav-item"><a href="javascript:void(0)" class="nav-link"><img
+                            src="https://sitethemedata.com/v96/static/front/img/icons/17.png"> <span>Lucky
+                            Streak</span></a></li>
+                <li class="nav-item"><a href="javascript:void(0)" class="nav-link"><img
+                            src="https://sitethemedata.com/v96/static/front/img/icons/5.png">
+                        <span>Evolution</span></a></li>
+                <li class="nav-item"><a href="javascript:void(0)" class="nav-link"><img
+                            src="https://sitethemedata.com/v96/static/front/img/icons/1.png"> <span>EZUGI</span></a>
+                </li>
+                <li class="nav-item"><a href="javascript:void(0)" class="nav-link"><img
+                            src="https://sitethemedata.com/v96/static/front/img/icons/6.png">
+                        <span>CockFight</span></a></li>
+                <li class="nav-item"><a href="javascript:void(0)" class="nav-link"><img
+                            src="https://sitethemedata.com/v96/static/front/img/icons/2.png"> <span>Super
+                            Spade</span></a></li> -->
+            </ul> 
+            <a (click)="scrollRight()" class="arrow-tabs arrow-right"><i class="fas fa-chevron-right"></i></a>
+        </div> <!---->
+    </div>
+    <div class="gamehall-wrap-simple">
+        <a class="entrance-half"   routerLink="/sncasino/{{casino.providerCode}}/{{casino.code}}"
+            *ngFor="let casino of SNcasinoList" style="cursor: pointer">
+            <dl class="entrance-title">
+                <dt>{{casino.name}}</dt>
+                <div class="rotating-border rotating-border--google heart"><span>{{Update?.playnow}} <i aria-hidden="true"
+                            class="fa fa-play"></i></span></div>
+                            <!-- <dd>{{Update?.playnow}}</dd> -->
+            </dl>
+            <!-- <img src="assets/images/casino/supernowa/SN_{{casino.thumb}}.jpeg"> -->
+            <img [src]="casino.thumb">
+        </a>
+    </div>
+
+</div>
