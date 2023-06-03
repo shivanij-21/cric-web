@@ -64,7 +64,7 @@ export class SupernowaCasinoComponent implements OnInit {
   }
   supernowaGameAssetsList(providerCode){
     this.apiService.supernowaGameAssetsList(providerCode).subscribe((resp: any) => {
-      // console.log(resp);
+      console.log(resp);
       
       if (resp.status.code == "SUCCESS") {
         this.SNcasinoList = resp.games;
